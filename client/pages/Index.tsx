@@ -771,6 +771,8 @@ export default function Index() {
                         alt="Nutritious Snack Box - Gift A Snack"
                         className="w-full h-40 sm:h-64 object-contain"
                         loading="lazy"
+                        width={400}
+                        height={256}
                       />
                     </div>
 
