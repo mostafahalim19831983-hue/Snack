@@ -894,7 +894,7 @@ export default function Index() {
                       onClick={() => setIsModalOpen(false)}
                       variant="outline"
                       size="lg"
-                      className="w-full py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                      className="w-full py-2 sm:py-3 rounded-xl touch-manipulation border-2"
                     >
                       Continue Browsing
                     </Button>
