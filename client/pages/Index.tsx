@@ -641,9 +641,9 @@ export default function Index() {
         </motion.section>
 
         {/* Simple Footer */}
-        <footer className="bg-slate-800 py-8 pb-24 sm:pb-8">
+        <footer className="bg-slate-800 py-6 pb-20 sm:py-8 sm:pb-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
