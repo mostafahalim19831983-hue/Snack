@@ -106,7 +106,9 @@ export function ExitIntentPopup({
               <Button
                 onClick={handleSubscribe}
                 disabled={!email || !isEmailValid}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                variant="primary"
+                size="xl"
+                className="w-full py-4"
               >
                 <Bell className="mr-2 h-5 w-5" />
                 👉 Subscribe Now
