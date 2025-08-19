@@ -188,7 +188,7 @@ export default function Index() {
                     <div className="flex items-center gap-2">
                       <Truck className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />
                       <span className="text-sm sm:text-base font-semibold text-green-800">
-                        Arrives by Thu, Aug 21
+                        Fast & reliable delivery
                       </span>
                     </div>
                     <span className="text-sm sm:text-base text-red-600 font-medium sm:ml-auto">
