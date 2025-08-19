@@ -11,7 +11,7 @@ export function StickyCTA({ onClick }: StickyCTAProps) {
     <motion.div
       initial={{ y: 100 }}
       animate={{ y: 0 }}
-      className="fixed bottom-4 left-4 right-4 z-50 md:left-auto md:right-4 md:bottom-4 md:w-auto"
+      className="fixed bottom-2 left-4 right-4 z-40 md:left-auto md:right-4 md:bottom-4 md:w-auto"
     >
       {/* Mobile: Full width bottom bar */}
       <div className="md:hidden">
