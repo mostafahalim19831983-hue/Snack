@@ -67,7 +67,13 @@ const customerReviews: CustomerReview[] = [
 ];
 
 // Memoized review card component for better performance
-const ReviewCard = ({ review, isDuplicate = false }: { review: CustomerReview; isDuplicate?: boolean }) => (
+const ReviewCard = ({
+  review,
+  isDuplicate = false,
+}: {
+  review: CustomerReview;
+  isDuplicate?: boolean;
+}) => (
   <div
     className="flex-shrink-0 w-72 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-5 border-2 hover:shadow-2xl transition-all duration-300"
     style={{ borderColor: "#007BFF" }}
@@ -149,9 +155,9 @@ export function CustomerReviews() {
             }}
           >
             {extendedReviews.map((review, index) => (
-              <ReviewCard 
-                key={`review-${review.id}-${Math.floor(index / customerReviews.length)}`} 
-                review={review} 
+              <ReviewCard
+                key={`review-${review.id}-${Math.floor(index / customerReviews.length)}`}
+                review={review}
                 isDuplicate={index >= customerReviews.length}
               />
             ))}
@@ -163,7 +169,10 @@ export function CustomerReviews() {
           <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
+                <Star
+                  key={i}
+                  className="h-4 w-4 text-yellow-500 fill-current"
+                />
               ))}
             </div>
             <span className="text-sm font-medium text-gray-700">

@@ -19,10 +19,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Optimized variants for common use cases
-        primary: 
+        primary:
           "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transform hover:scale-105",
-        cta: 
-          "bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-2xl hover:shadow-3xl transform hover:scale-105",
+        cta: "bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-2xl hover:shadow-3xl transform hover:scale-105",
         glass:
           "bg-white text-blue-600 hover:bg-gray-50 shadow-xl hover:shadow-2xl transform hover:scale-105",
       },
@@ -72,14 +71,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         alt=""
         className={cn(
           "animate-spin-slow opacity-80 flex-shrink-0",
-          size === "sm" ? "w-3 h-3" : 
-          size === "lg" ? "w-5 h-5" :
-          size === "xl" ? "w-6 h-6" :
-          "w-4 h-4"
+          size === "sm"
+            ? "w-3 h-3"
+            : size === "lg"
+              ? "w-5 h-5"
+              : size === "xl"
+                ? "w-6 h-6"
+                : "w-4 h-4",
         )}
         loading="lazy"
-        width={size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16}
-        height={size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16}
+        width={
+          size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16
+        }
+        height={
+          size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16
+        }
       />
     );
 
