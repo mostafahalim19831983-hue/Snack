@@ -231,6 +231,8 @@ export default function Index() {
                       alt="Nutritious Snack Box with Breakfast Bars and Delicious Chips - 42 Count"
                       className="w-full h-auto rounded-2xl shadow-lg"
                       loading="eager"
+                      width={800}
+                      height={600}
                     />
                   </div>
                 </motion.div>
