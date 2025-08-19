@@ -199,8 +199,9 @@ export default function Index() {
                 {/* Primary CTA */}
                 <Button
                   onClick={handleCardClick}
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mb-3 sm:mb-4 touch-manipulation"
+                  variant="primary"
+                  size="xl"
+                  className="w-full py-3 sm:py-4 mb-3 sm:mb-4 touch-manipulation"
                 >
                   View Product Details
                   <ShoppingCart className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
