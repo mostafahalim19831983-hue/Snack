@@ -201,6 +201,7 @@ export default function Index() {
                   onClick={handleCardClick}
                   variant="primary"
                   size="xl"
+                  sparkPosition="left"
                   className="w-full py-3 sm:py-4 mb-3 sm:mb-4 touch-manipulation"
                 >
                   View Product Details
@@ -627,6 +628,7 @@ export default function Index() {
                   onClick={handleCardClick}
                   variant="cta"
                   size="xl"
+                  sparkPosition="left"
                   className="w-full px-8 py-6 mb-6 touch-manipulation"
                 >
                   Get Your Snack Box Now
@@ -884,6 +886,7 @@ export default function Index() {
                       }}
                       variant="primary"
                       size="lg"
+                      sparkPosition="left"
                       className="w-full py-3 sm:py-4 rounded-xl touch-manipulation"
                     >
                       Buy Now on Walmart
