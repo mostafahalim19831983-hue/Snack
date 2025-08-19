@@ -20,6 +20,7 @@ export function StickyCTA({ onClick }: StickyCTAProps) {
             onClick={onClick}
             variant="primary"
             size="xl"
+            sparkPosition="left"
             className="w-full py-4"
           >
             View Product Details
@@ -34,6 +35,7 @@ export function StickyCTA({ onClick }: StickyCTAProps) {
           onClick={onClick}
           variant="primary"
           size="lg"
+          sparkPosition="left"
           className="px-6 py-3 rounded-full"
         >
           <ShoppingCart className="mr-2 h-5 w-5" />
