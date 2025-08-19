@@ -210,8 +210,8 @@ export default function Index() {
                 <Button
                   onClick={scrollToProduct}
                   variant="outline"
-                  size="lg"
-                  className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 touch-manipulation"
+                  size="xl"
+                  className="w-full py-3 sm:py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 touch-manipulation"
                 >
                   Learn More About This Product
                 </Button>
