@@ -624,8 +624,9 @@ export default function Index() {
                 {/* Enhanced CTA Button */}
                 <Button
                   onClick={handleCardClick}
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 touch-manipulation mb-6"
+                  variant="cta"
+                  size="xl"
+                  className="w-full px-8 py-6 mb-6 touch-manipulation"
                 >
                   Get Your Snack Box Now
                   <ShoppingCart className="ml-3 h-6 w-6" />
