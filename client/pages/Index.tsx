@@ -414,7 +414,10 @@ export default function Index() {
                         {/* 1 partially filled star (75%) */}
                         <div className="relative">
                           <Star className="h-5 w-5 text-gray-300" />
-                          <div className="absolute inset-0 overflow-hidden" style={{width: '75%'}}>
+                          <div
+                            className="absolute inset-0 overflow-hidden"
+                            style={{ width: "75%" }}
+                          >
                             <Star className="h-5 w-5 text-yellow-400 fill-current" />
                           </div>
                         </div>
