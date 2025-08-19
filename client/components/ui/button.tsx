@@ -18,11 +18,19 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Optimized variants for common use cases
+        primary: 
+          "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl transform hover:scale-105",
+        cta: 
+          "bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-2xl hover:shadow-3xl transform hover:scale-105",
+        glass:
+          "bg-white text-blue-600 hover:bg-gray-50 shadow-xl hover:shadow-2xl transform hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-2xl px-8 text-lg font-bold",
         icon: "h-10 w-10",
       },
     },
@@ -49,7 +57,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       asChild = false,
       showSparkIcon = true,
-      sparkPosition = "left",
+      sparkPosition = "right",
       children,
       ...props
     },
@@ -57,39 +65,26 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const Comp = asChild ? Slot : "button";
 
+    const sparkIcon = showSparkIcon && (variant === "primary" || variant === "cta" || variant === "glass") && (
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F84282e2d620247d2b8d8845fda2c790e%2F23fc4e6c80654c0aa6eaac95fab82073?format=webp&width=800"
+        alt=""
+        className="w-4 h-4 animate-spin-slow opacity-80"
+        loading="lazy"
+        width={16}
+        height={16}
+      />
+    );
+
     return (
       <Comp
-        className={cn(
-          buttonVariants({ variant, size }),
-          "button-glow-animation",
-          className,
-        )}
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       >
-        {/* Pulsing glow overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-300/20 via-orange-300/20 to-yellow-300/20 opacity-0 animate-pulse-glow pointer-events-none rounded-md" />
-
-        {/* Content wrapper */}
-        <div className="relative z-10 flex items-center justify-center gap-2">
-          {showSparkIcon && sparkPosition === "left" && (
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F8a4c4b7392a543f5ad3f29cca02f0637?format=webp&width=800"
-              alt=""
-              className="w-4 h-4 animate-spin-slow brightness-110"
-            />
-          )}
-
-          <span className="flex items-center gap-2">{children}</span>
-
-          {showSparkIcon && sparkPosition === "right" && (
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F8a4c4b7392a543f5ad3f29cca02f0637?format=webp&width=800"
-              alt=""
-              className="w-4 h-4 animate-spin-slow brightness-110"
-            />
-          )}
-        </div>
+        {sparkPosition === "left" && sparkIcon}
+        {children}
+        {sparkPosition === "right" && sparkIcon}
       </Comp>
     );
   },
