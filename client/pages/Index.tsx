@@ -171,11 +171,17 @@ export default function Index() {
                       className="[&>div:first-child]:flex-col sm:[&>div:first-child]:flex-row [&>div:first-child]:items-start sm:[&>div:first-child]:items-center [&>div:first-child]:gap-2 sm:[&>div:first-child]:gap-3"
                     />
                     <div className="flex flex-col">
-                      <span className="text-xs sm:text-sm text-green-600 font-medium">
-                        ✓ Fresh & high-quality snacks
+                      <span className="text-xs sm:text-sm text-green-600 font-medium flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        Fresh & high-quality snacks
                       </span>
-                      <span className="text-xs sm:text-sm text-blue-600 font-medium">
-                        ✓ Walmart+ offer eligible
+                      <span className="text-xs sm:text-sm text-blue-600 font-medium flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        Walmart+ offer eligible
                       </span>
                     </div>
                   </div>
@@ -190,8 +196,11 @@ export default function Index() {
                         Fast & reliable delivery
                       </span>
                     </div>
-                    <span className="text-sm sm:text-base text-red-600 font-medium sm:ml-auto">
-                      ⚡ Limited stock available
+                    <span className="text-sm sm:text-base text-red-600 font-medium sm:ml-auto flex items-center gap-1">
+                      <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                      </svg>
+                      Limited stock available
                     </span>
                   </div>
                 </div>
@@ -823,11 +832,17 @@ export default function Index() {
                       size="lg"
                       className="mb-2"
                     />
-                    <div className="text-sm text-green-600 font-medium">
-                      ✓ Fresh & high-quality snacks
+                    <div className="text-sm text-green-600 font-medium flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Fresh & high-quality snacks
                     </div>
-                    <div className="text-sm text-blue-600 font-medium">
-                      ✓ Walmart+ offer eligible
+                    <div className="text-sm text-blue-600 font-medium flex items-center gap-1">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      Walmart+ offer eligible
                     </div>
                   </div>
 
