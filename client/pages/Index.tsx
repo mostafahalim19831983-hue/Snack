@@ -404,15 +404,21 @@ export default function Index() {
                     <h3 className="text-2xl font-bold mb-2">Pro Seller</h3>
                     <div className="flex items-center justify-center gap-2 mb-2">
                       <div className="flex">
+                        {/* 4 full stars */}
                         {[...Array(4)].map((_, i) => (
                           <Star
                             key={i}
                             className="h-5 w-5 text-yellow-400 fill-current"
                           />
                         ))}
-                        <Star className="h-5 w-5 text-yellow-400" />
+                        {/* 1 partially filled star (75%) */}
+                        <div className="relative">
+                          <Star className="h-5 w-5 text-gray-300" />
+                          <div className="absolute inset-0 overflow-hidden" style={{width: '75%'}}>
+                            <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                          </div>
+                        </div>
                       </div>
-                      <span className="font-semibold">4.1</span>
                     </div>
                     <p className="text-blue-100">from 570 reviews</p>
                   </div>
