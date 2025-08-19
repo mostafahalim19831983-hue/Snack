@@ -882,8 +882,9 @@ export default function Index() {
                         setIsModalOpen(false);
                         handleProceedToWalmart();
                       }}
+                      variant="primary"
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                      className="w-full py-3 sm:py-4 rounded-xl touch-manipulation"
                     >
                       Buy Now on Walmart
                       <ShoppingCart className="ml-2 h-5 w-5" />
