@@ -364,8 +364,9 @@ export default function Index() {
             <div className="text-center mt-8 sm:mt-12">
               <Button
                 onClick={handleCardClick}
+                variant="primary"
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                className="px-6 sm:px-8 py-3 sm:py-4 touch-manipulation"
               >
                 View Product Details
                 <ShoppingCart className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
