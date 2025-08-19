@@ -596,7 +596,6 @@ export default function Index() {
                       "Fresh & high-quality snacks from top brands",
                       "Perfect for gifting or office sharing",
                       "Fast & reliable delivery nationwide",
-                      "Arrives by Thu, Aug 21",
                       "Greeting card included",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
@@ -642,9 +641,9 @@ export default function Index() {
         </motion.section>
 
         {/* Simple Footer */}
-        <footer className="bg-slate-800 py-8">
+        <footer className="bg-slate-800 py-8 pb-24 sm:pb-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center items-center gap-8">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
