@@ -593,10 +593,10 @@ export default function Index() {
                   <div className="space-y-3">
                     {[
                       "42 premium snacks included",
-                      "Subscribe & Save available",
-                      "Free 90-day returns",
+                      "Fresh & high-quality snacks from top brands",
+                      "Perfect for gifting or office sharing",
+                      "Fast & reliable delivery nationwide",
                       "Arrives by Thu, Aug 21",
-                      "Beautiful gift packaging",
                       "Greeting card included",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
