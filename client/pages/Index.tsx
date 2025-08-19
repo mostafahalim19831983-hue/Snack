@@ -571,6 +571,8 @@ export default function Index() {
                   alt="Nutritious Snack Box"
                   className="w-full max-w-md mx-auto lg:mx-0 rounded-2xl shadow-2xl"
                   loading="lazy"
+                  width={400}
+                  height={300}
                 />
               </motion.div>
 
