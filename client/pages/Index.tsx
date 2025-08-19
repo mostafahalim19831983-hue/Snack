@@ -483,6 +483,8 @@ export default function Index() {
                     alt={`Product view ${index + 1}`}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
+                    width={800}
+                    height={256}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 text-white">
@@ -532,7 +534,7 @@ export default function Index() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4"
               >
-                <span>🔥</span>
+                <span>����</span>
                 <span>Bestseller - Limited Time Offer</span>
               </motion.div>
 
