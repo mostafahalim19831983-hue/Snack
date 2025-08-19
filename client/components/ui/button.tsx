@@ -65,14 +65,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const Comp = asChild ? Slot : "button";
 
-    const sparkIcon = showSparkIcon && (variant === "primary" || variant === "cta" || variant === "glass") && (
+    // Show spark icon on all variants when showSparkIcon is true, with proper sizing
+    const sparkIcon = showSparkIcon && (
       <img
-        src="https://cdn.builder.io/api/v1/image/assets%2F84282e2d620247d2b8d8845fda2c790e%2F23fc4e6c80654c0aa6eaac95fab82073?format=webp&width=800"
+        src="https://cdn.builder.io/api/v1/image/assets%2Ffc09862a9f0941d4aeda13a8cb2480bc%2Fd2504f966bda4c08b158ae4050af9f8a?format=webp&width=800"
         alt=""
-        className="w-4 h-4 animate-spin-slow opacity-80"
+        className={cn(
+          "animate-spin-slow opacity-80 flex-shrink-0",
+          size === "sm" ? "w-3 h-3" : 
+          size === "lg" ? "w-5 h-5" :
+          size === "xl" ? "w-6 h-6" :
+          "w-4 h-4"
+        )}
         loading="lazy"
-        width={16}
-        height={16}
+        width={size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16}
+        height={size === "sm" ? 12 : size === "lg" ? 20 : size === "xl" ? 24 : 16}
       />
     );
 
