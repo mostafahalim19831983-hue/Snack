@@ -98,7 +98,7 @@ export function PurchaseConfirmationModal({
                   className="mb-2 [&>div:first-child]:flex-col sm:[&>div:first-child]:flex-row [&>div:first-child]:items-start sm:[&>div:first-child]:items-center [&>div:first-child]:gap-2 sm:[&>div:first-child]:gap-3"
                 />
                 <div className="text-xs sm:text-sm text-green-600 font-medium">
-                  ✓ Subscribe & Save available
+                  ✓ Fresh & high-quality snacks
                 </div>
                 <div className="text-xs sm:text-sm text-blue-600 font-medium">
                   ✓ Walmart+ offer eligible
