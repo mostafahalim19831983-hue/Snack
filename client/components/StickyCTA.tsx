@@ -18,8 +18,9 @@ export function StickyCTA({ onClick }: StickyCTAProps) {
         <div className="bg-gradient-to-t from-white via-white/95 to-transparent backdrop-blur-sm p-4 rounded-t-2xl">
           <Button
             onClick={onClick}
-            size="lg"
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            variant="primary"
+            size="xl"
+            className="w-full py-4"
           >
             View Product Details
             <ShoppingCart className="ml-2 h-5 w-5" />
@@ -31,8 +32,9 @@ export function StickyCTA({ onClick }: StickyCTAProps) {
       <div className="hidden md:block">
         <Button
           onClick={onClick}
+          variant="primary"
           size="lg"
-          className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
+          className="px-6 py-3 rounded-full"
         >
           <ShoppingCart className="mr-2 h-5 w-5" />
           Quick View
