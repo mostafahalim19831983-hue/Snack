@@ -173,7 +173,7 @@ export default function Index() {
                     />
                     <div className="flex flex-col">
                       <span className="text-xs sm:text-sm text-green-600 font-medium">
-                        ✓ Subscribe & Save available
+                        ✓ Fresh & high-quality snacks
                       </span>
                       <span className="text-xs sm:text-sm text-blue-600 font-medium">
                         ✓ Walmart+ offer eligible
@@ -809,7 +809,7 @@ export default function Index() {
                       className="mb-2"
                     />
                     <div className="text-sm text-green-600 font-medium">
-                      ✓ Subscribe & Save available
+                      ✓ Fresh & high-quality snacks
                     </div>
                     <div className="text-sm text-blue-600 font-medium">
                       ✓ Walmart+ offer eligible
