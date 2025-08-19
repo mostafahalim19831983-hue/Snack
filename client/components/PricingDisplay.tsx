@@ -48,11 +48,6 @@ export function PricingDisplay({
           {formattedSalePrice}
         </span>
       </div>
-      <div
-        className={cn("text-orange-600 font-medium", sizeClasses[size].savings)}
-      >
-        You save {savingsPercentage}%
-      </div>
     </div>
   );
 }
