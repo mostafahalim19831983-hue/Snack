@@ -14,7 +14,7 @@ const customerReviews: CustomerReview[] = [
     id: 1,
     name: "Sarah Johnson",
     photo:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b1-1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      "https://images.pexels.com/photos/8872492/pexels-photo-8872492.jpeg?auto=compress&cs=tinysrgb&w=800",
     rating: 5,
     review:
       "Amazing variety of snacks! Perfect for my office team. The breakfast bars are especially delicious and the packaging is so professional.",
@@ -50,7 +50,7 @@ const customerReviews: CustomerReview[] = [
     id: 5,
     name: "Jessica Martinez",
     photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "https://images.pexels.com/photos/1181695/pexels-photo-1181695.jpeg?auto=compress&cs=tinysrgb&w=800",
     rating: 5,
     review:
       "Exceeded my expectations! The box is beautifully packaged and the snacks are high quality. Perfect for busy days when I need quick energy.",
