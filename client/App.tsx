@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 
 // Admin components
 import { AdminLayout } from "@/components/admin/AdminLayout";
+import { ExitIntentModal } from "@/components/admin/ExitIntentModal";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminHero from "./pages/admin/Hero";
 import AdminWhyChoose from "./pages/admin/WhyChoose";
@@ -49,9 +50,12 @@ const App = () => (
           <Route path="/admin/footer" element={<AdminLayout><AdminFooter /></AdminLayout>} />
           <Route path="/admin/seo" element={<AdminLayout><AdminSEO /></AdminLayout>} />
           
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        
+        {/* Exit Intent Modal for admin pages */}
+        <ExitIntentModal />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
