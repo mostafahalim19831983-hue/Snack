@@ -62,7 +62,7 @@ export default function AdminDashboard() {
           <CardTitle className="text-xl text-gray-800">Quick Actions</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Button variant="outline" className="h-16 flex flex-col items-center justify-center space-y-2" disabled>
               <Eye className="w-5 h-5" />
               <span>Preview Site</span>
@@ -75,6 +75,9 @@ export default function AdminDashboard() {
               <TrendingUp className="w-5 h-5" />
               <span>View Analytics</span>
             </Button>
+            <div className="h-16 flex items-center justify-center">
+              <ExampleModalUsage />
+            </div>
           </div>
         </CardContent>
       </Card>
