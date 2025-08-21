@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
   LayoutDashboard,
   Star,
@@ -11,12 +10,8 @@ import {
   Share2,
   Search,
   Menu,
-  X,
-  Home,
-  Settings
+  X
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ExitIntentModal } from './ExitIntentModal';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -38,11 +33,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
 
-  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-
   return (
     <div className="min-h-screen bg-gray-50 flex">
-      {/* Mobile sidebar overlay */}
+      {/* Mobile overlay */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 z-20 bg-black bg-opacity-50 lg:hidden"
@@ -51,34 +44,23 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       )}
 
       {/* Sidebar */}
-      <motion.div
-        initial={false}
-        animate={{
-          x: sidebarOpen ? 0 : '-100%',
-        }}
-        className={`fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-lg transform lg:translate-x-0 lg:static lg:inset-0 transition-transform duration-300 ease-in-out lg:block`}
-      >
+      <div className={`fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-lg transform ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Settings className="w-5 h-5 text-white" />
-              </div>
-              <h1 className="text-lg font-semibold text-gray-900">Admin Panel</h1>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleSidebar}
-              className="lg:hidden"
+            <h2 className="text-lg font-semibold text-gray-900">Admin Menu</h2>
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600"
             >
               <X className="w-5 h-5" />
-            </Button>
+            </button>
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 px-4 py-4 space-y-2">
+          <nav className="flex-1 px-4 py-4 space-y-1">
             {sidebarItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
@@ -98,36 +80,21 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               );
             })}
           </nav>
-
-          {/* Back to Site Link */}
-          <div className="p-4 border-t border-gray-200">
-            <Link
-              to="/"
-              className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              <span>Back to Site</span>
-            </Link>
-          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col lg:ml-0">
+      <div className="flex-1 flex flex-col">
         {/* Top Header */}
         <header className="bg-white shadow-sm border-b border-gray-200">
-          <div className="flex items-center justify-between px-4 py-4">
-            <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleSidebar}
-                className="lg:hidden"
-              >
-                <Menu className="w-5 h-5" />
-              </Button>
-              <h1 className="text-2xl font-bold text-gray-900">Snack Box Admin</h1>
-            </div>
+          <div className="flex items-center px-4 py-4">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 mr-4"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+            <h1 className="text-2xl font-bold text-gray-900">Snack Box Admin</h1>
           </div>
         </header>
 
@@ -136,11 +103,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           {children}
         </main>
       </div>
-
-      {/* Exit Intent Modal */}
-      <ExitIntentModal
-        hasUnsavedChanges={false} // This will be dynamic in Phase 2
-      />
     </div>
   );
 }
