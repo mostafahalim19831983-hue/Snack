@@ -16,6 +16,7 @@ import {
   Settings
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ExitIntentModal } from './ExitIntentModal';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
