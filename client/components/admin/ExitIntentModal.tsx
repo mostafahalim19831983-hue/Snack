@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { AlertTriangle, X } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { AlertTriangle, X } from "lucide-react";
 
 export function ExitIntentModal() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,10 +14,10 @@ export function ExitIntentModal() {
       }
     };
 
-    document.addEventListener('mouseleave', handleMouseLeave);
-    
+    document.addEventListener("mouseleave", handleMouseLeave);
+
     return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [hasShown]);
 
@@ -31,7 +31,7 @@ export function ExitIntentModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black bg-opacity-50" />
-      
+
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-xl w-full mx-4 max-w-md">
         {/* Header */}
@@ -47,20 +47,20 @@ export function ExitIntentModal() {
             <X className="w-5 h-5" />
           </button>
         </div>
-        
+
         {/* Content */}
         <div className="p-6 text-center">
           <p className="text-gray-600 mb-4">
             Are you sure you want to leave the admin dashboard?
           </p>
           <div className="space-y-2">
-            <button 
+            <button
               onClick={handleClose}
               className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
             >
               Stay on Page
             </button>
-            <button 
+            <button
               onClick={handleClose}
               className="w-full px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
             >

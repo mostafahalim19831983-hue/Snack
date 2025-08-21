@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
   Star,
@@ -10,23 +10,53 @@ import {
   Share2,
   Search,
   Menu,
-  X
-} from 'lucide-react';
+  X,
+} from "lucide-react";
 
 interface AdminLayoutProps {
   children: React.ReactNode;
 }
 
 const sidebarItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
-  { id: 'hero', label: 'Hero', icon: Star, path: '/admin/hero' },
-  { id: 'why-choose', label: 'Why Choose', icon: Trophy, path: '/admin/why-choose' },
-  { id: 'walmart', label: 'Walmart', icon: Package, path: '/admin/walmart' },
-  { id: 'inside-box', label: 'Inside Box', icon: Package, path: '/admin/inside-box' },
-  { id: 'testimonials', label: 'Testimonials', icon: MessageSquare, path: '/admin/testimonials' },
-  { id: 'offer-pricing', label: 'Offer / Pricing', icon: DollarSign, path: '/admin/offer-pricing' },
-  { id: 'footer', label: 'Footer (Social Links)', icon: Share2, path: '/admin/footer' },
-  { id: 'seo', label: 'SEO', icon: Search, path: '/admin/seo' },
+  {
+    id: "dashboard",
+    label: "Dashboard",
+    icon: LayoutDashboard,
+    path: "/admin",
+  },
+  { id: "hero", label: "Hero", icon: Star, path: "/admin/hero" },
+  {
+    id: "why-choose",
+    label: "Why Choose",
+    icon: Trophy,
+    path: "/admin/why-choose",
+  },
+  { id: "walmart", label: "Walmart", icon: Package, path: "/admin/walmart" },
+  {
+    id: "inside-box",
+    label: "Inside Box",
+    icon: Package,
+    path: "/admin/inside-box",
+  },
+  {
+    id: "testimonials",
+    label: "Testimonials",
+    icon: MessageSquare,
+    path: "/admin/testimonials",
+  },
+  {
+    id: "offer-pricing",
+    label: "Offer / Pricing",
+    icon: DollarSign,
+    path: "/admin/offer-pricing",
+  },
+  {
+    id: "footer",
+    label: "Footer (Social Links)",
+    icon: Share2,
+    path: "/admin/footer",
+  },
+  { id: "seo", label: "SEO", icon: Search, path: "/admin/seo" },
 ];
 
 export function AdminLayout({ children }: AdminLayoutProps) {
@@ -44,9 +74,11 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-lg transform ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
+      <div
+        className={`fixed inset-y-0 left-0 z-30 w-64 bg-white shadow-lg transform ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}
+      >
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -70,8 +102,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-blue-100 text-blue-700 border border-blue-200'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? "bg-blue-100 text-blue-700 border border-blue-200"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                   }`}
                 >
                   <item.icon className="w-5 h-5" />
@@ -94,14 +126,14 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             >
               <Menu className="w-5 h-5" />
             </button>
-            <h1 className="text-2xl font-bold text-gray-900">Snack Box Admin</h1>
+            <h1 className="text-2xl font-bold text-gray-900">
+              Snack Box Admin
+            </h1>
           </div>
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 p-6">
-          {children}
-        </main>
+        <main className="flex-1 p-6">{children}</main>
       </div>
     </div>
   );

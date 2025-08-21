@@ -38,22 +38,85 @@ const App = () => (
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Index />} />
-          
+
           {/* Admin Routes */}
-          <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
-          <Route path="/admin/hero" element={<AdminLayout><AdminHero /></AdminLayout>} />
-          <Route path="/admin/why-choose" element={<AdminLayout><AdminWhyChoose /></AdminLayout>} />
-          <Route path="/admin/walmart" element={<AdminLayout><AdminWalmart /></AdminLayout>} />
-          <Route path="/admin/inside-box" element={<AdminLayout><AdminInsideBox /></AdminLayout>} />
-          <Route path="/admin/testimonials" element={<AdminLayout><AdminTestimonials /></AdminLayout>} />
-          <Route path="/admin/offer-pricing" element={<AdminLayout><AdminOfferPricing /></AdminLayout>} />
-          <Route path="/admin/footer" element={<AdminLayout><AdminFooter /></AdminLayout>} />
-          <Route path="/admin/seo" element={<AdminLayout><AdminSEO /></AdminLayout>} />
-          
+          <Route
+            path="/admin"
+            element={
+              <AdminLayout>
+                <AdminDashboard />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/hero"
+            element={
+              <AdminLayout>
+                <AdminHero />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/why-choose"
+            element={
+              <AdminLayout>
+                <AdminWhyChoose />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/walmart"
+            element={
+              <AdminLayout>
+                <AdminWalmart />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/inside-box"
+            element={
+              <AdminLayout>
+                <AdminInsideBox />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/testimonials"
+            element={
+              <AdminLayout>
+                <AdminTestimonials />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/offer-pricing"
+            element={
+              <AdminLayout>
+                <AdminOfferPricing />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/footer"
+            element={
+              <AdminLayout>
+                <AdminFooter />
+              </AdminLayout>
+            }
+          />
+          <Route
+            path="/admin/seo"
+            element={
+              <AdminLayout>
+                <AdminSEO />
+              </AdminLayout>
+            }
+          />
+
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        
+
         {/* Exit Intent Modal for admin pages */}
         <ExitIntentModal />
       </BrowserRouter>
