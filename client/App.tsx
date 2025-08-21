@@ -9,6 +9,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+// Admin components
+import { AdminLayout } from "@/components/admin/AdminLayout";
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminHero from "./pages/admin/Hero";
+import AdminWhyChoose from "./pages/admin/WhyChoose";
+import AdminWalmart from "./pages/admin/Walmart";
+import AdminInsideBox from "./pages/admin/InsideBox";
+import AdminTestimonials from "./pages/admin/Testimonials";
+import AdminOfferPricing from "./pages/admin/OfferPricing";
+import AdminFooter from "./pages/admin/Footer";
+import AdminSEO from "./pages/admin/SEO";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -23,7 +35,20 @@ const App = () => (
         }}
       >
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<Index />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
+          <Route path="/admin/hero" element={<AdminLayout><AdminHero /></AdminLayout>} />
+          <Route path="/admin/why-choose" element={<AdminLayout><AdminWhyChoose /></AdminLayout>} />
+          <Route path="/admin/walmart" element={<AdminLayout><AdminWalmart /></AdminLayout>} />
+          <Route path="/admin/inside-box" element={<AdminLayout><AdminInsideBox /></AdminLayout>} />
+          <Route path="/admin/testimonials" element={<AdminLayout><AdminTestimonials /></AdminLayout>} />
+          <Route path="/admin/offer-pricing" element={<AdminLayout><AdminOfferPricing /></AdminLayout>} />
+          <Route path="/admin/footer" element={<AdminLayout><AdminFooter /></AdminLayout>} />
+          <Route path="/admin/seo" element={<AdminLayout><AdminSEO /></AdminLayout>} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
