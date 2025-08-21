@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { LayoutDashboard, Users, Eye, TrendingUp, Package } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ExampleModalUsage } from '@/components/admin/GeneralModal';
 
 export default function AdminDashboard() {
   const stats = [
