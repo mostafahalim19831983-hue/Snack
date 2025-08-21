@@ -136,6 +136,11 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           {children}
         </main>
       </div>
+
+      {/* Exit Intent Modal */}
+      <ExitIntentModal
+        hasUnsavedChanges={false} // This will be dynamic in Phase 2
+      />
     </div>
   );
 }
