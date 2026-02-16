@@ -47,45 +47,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-        // Fresh theme colors for snack box landing
-        fresh: {
-          green: {
-            50: "hsl(142, 76%, 97%)",
-            100: "hsl(142, 76%, 90%)",
-            500: "hsl(142, 76%, 36%)",
-            600: "hsl(142, 76%, 31%)",
-            700: "hsl(142, 76%, 26%)",
-          },
-          lime: {
-            400: "hsl(84, 86%, 54%)",
-            500: "hsl(84, 86%, 48%)",
-            600: "hsl(84, 86%, 42%)",
-          },
-          cream: {
-            50: "hsl(48, 100%, 98%)",
-            100: "hsl(48, 100%, 95%)",
-            200: "hsl(48, 100%, 90%)",
-          },
-          wine: {
-            400: "hsl(345, 75%, 47%)",
-            500: "hsl(345, 75%, 42%)",
-            600: "hsl(345, 75%, 37%)",
-            700: "hsl(345, 75%, 32%)",
-          },
-          walmart: {
-            blue: "hsl(214, 100%, 35%)",
-          },
-        },
       },
       borderRadius: {
         lg: "var(--radius)",

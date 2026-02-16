@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   X,
   Star,
@@ -7,7 +7,6 @@ import {
   Check,
   Zap,
   Users,
-  Clock,
   Shield,
   ChevronLeft,
   ChevronRight,
@@ -172,11 +171,33 @@ export default function Index() {
                       className="[&>div:first-child]:flex-col sm:[&>div:first-child]:flex-row [&>div:first-child]:items-start sm:[&>div:first-child]:items-center [&>div:first-child]:gap-2 sm:[&>div:first-child]:gap-3"
                     />
                     <div className="flex flex-col">
-                      <span className="text-xs sm:text-sm text-green-600 font-medium">
-                        ✓ Subscribe & Save available
+                      <span className="text-xs sm:text-sm text-green-600 font-medium flex items-center gap-1">
+                        <svg
+                          className="w-3 h-3"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Fresh & high-quality snacks
                       </span>
-                      <span className="text-xs sm:text-sm text-blue-600 font-medium">
-                        ✓ Walmart+ offer eligible
+                      <span className="text-xs sm:text-sm text-blue-600 font-medium flex items-center gap-1">
+                        <svg
+                          className="w-3 h-3"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Walmart+ offer eligible
                       </span>
                     </div>
                   </div>
@@ -188,11 +209,22 @@ export default function Index() {
                     <div className="flex items-center gap-2">
                       <Truck className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />
                       <span className="text-sm sm:text-base font-semibold text-green-800">
-                        Arrives by Thu, Aug 21
+                        Fast & reliable delivery
                       </span>
                     </div>
-                    <span className="text-sm sm:text-base text-red-600 font-medium sm:ml-auto">
-                      ⚡ Limited stock available
+                    <span className="text-sm sm:text-base text-red-600 font-medium sm:ml-auto flex items-center gap-1">
+                      <svg
+                        className="w-4 h-4 text-yellow-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Limited stock available
                     </span>
                   </div>
                 </div>
@@ -200,8 +232,10 @@ export default function Index() {
                 {/* Primary CTA */}
                 <Button
                   onClick={handleCardClick}
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mb-3 sm:mb-4 touch-manipulation"
+                  variant="primary"
+                  size="xl"
+                  sparkPosition="left"
+                  className="w-full py-3 sm:py-4 mb-3 sm:mb-4 touch-manipulation"
                 >
                   View Product Details
                   <ShoppingCart className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
@@ -210,8 +244,8 @@ export default function Index() {
                 <Button
                   onClick={scrollToProduct}
                   variant="outline"
-                  size="lg"
-                  className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl border-2 border-blue-600 text-blue-600 hover:bg-blue-50 touch-manipulation"
+                  size="xl"
+                  className="w-full py-3 sm:py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 touch-manipulation"
                 >
                   Learn More About This Product
                 </Button>
@@ -232,6 +266,8 @@ export default function Index() {
                       alt="Nutritious Snack Box with Breakfast Bars and Delicious Chips - 42 Count"
                       className="w-full h-auto rounded-2xl shadow-lg"
                       loading="eager"
+                      width={800}
+                      height={600}
                     />
                   </div>
                 </motion.div>
@@ -362,8 +398,9 @@ export default function Index() {
             <div className="text-center mt-8 sm:mt-12">
               <Button
                 onClick={handleCardClick}
+                variant="primary"
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                className="px-6 sm:px-8 py-3 sm:py-4 touch-manipulation"
               >
                 View Product Details
                 <ShoppingCart className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -404,15 +441,24 @@ export default function Index() {
                     <h3 className="text-2xl font-bold mb-2">Pro Seller</h3>
                     <div className="flex items-center justify-center gap-2 mb-2">
                       <div className="flex">
+                        {/* 4 full stars */}
                         {[...Array(4)].map((_, i) => (
                           <Star
                             key={i}
                             className="h-5 w-5 text-yellow-400 fill-current"
                           />
                         ))}
-                        <Star className="h-5 w-5 text-yellow-400" />
+                        {/* 1 partially filled star (75%) */}
+                        <div className="relative">
+                          <Star className="h-5 w-5 text-gray-300" />
+                          <div
+                            className="absolute inset-0 overflow-hidden"
+                            style={{ width: "75%" }}
+                          >
+                            <Star className="h-5 w-5 text-yellow-400 fill-current" />
+                          </div>
+                        </div>
                       </div>
-                      <span className="font-semibold">4.1</span>
                     </div>
                     <p className="text-blue-100">from 570 reviews</p>
                   </div>
@@ -436,8 +482,9 @@ export default function Index() {
               <div className="text-center mt-8">
                 <Button
                   onClick={handleCardClick}
+                  variant="glass"
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                  className="px-6 sm:px-8 py-3 sm:py-4 touch-manipulation"
                 >
                   View Product Details
                   <ShoppingCart className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -473,6 +520,8 @@ export default function Index() {
                     alt={`Product view ${index + 1}`}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
+                    width={800}
+                    height={256}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 text-white">
@@ -492,8 +541,9 @@ export default function Index() {
             <div className="text-center mt-8 sm:mt-12">
               <Button
                 onClick={handleCardClick}
+                variant="primary"
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                className="px-6 sm:px-8 py-3 sm:py-4 touch-manipulation"
               >
                 View Product Details
                 <ShoppingCart className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -522,7 +572,17 @@ export default function Index() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4"
               >
-                <span>🔥</span>
+                <svg
+                  className="w-5 h-5 text-orange-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                    clipRule="evenodd"
+                  />
+                </svg>
                 <span>Bestseller - Limited Time Offer</span>
               </motion.div>
 
@@ -559,6 +619,8 @@ export default function Index() {
                   alt="Nutritious Snack Box"
                   className="w-full max-w-md mx-auto lg:mx-0 rounded-2xl shadow-2xl"
                   loading="lazy"
+                  width={400}
+                  height={300}
                 />
               </motion.div>
 
@@ -578,19 +640,15 @@ export default function Index() {
                       size="lg"
                       className="[&>div:first-child>span:last-child]:text-4xl sm:[&>div:first-child>span:last-child]:text-5xl [&>div:first-child>span:last-child]:font-bold [&>div:first-child>span:last-child]:text-green-600"
                     />
-                    <p className="text-red-600 font-semibold text-lg mt-2">
-                      You save 26% - Limited time!
-                    </p>
                   </div>
 
                   {/* Benefits with Checkmarks */}
                   <div className="space-y-3">
                     {[
                       "42 premium snacks included",
-                      "Subscribe & Save available",
-                      "Free 90-day returns",
-                      "Arrives by Thu, Aug 21",
-                      "Beautiful gift packaging",
+                      "Fresh & high-quality snacks from top brands",
+                      "Perfect for gifting or office sharing",
+                      "Fast & reliable delivery nationwide",
                       "Greeting card included",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
@@ -608,8 +666,10 @@ export default function Index() {
                 {/* Enhanced CTA Button */}
                 <Button
                   onClick={handleCardClick}
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 touch-manipulation mb-6"
+                  variant="cta"
+                  size="xl"
+                  sparkPosition="left"
+                  className="w-full px-8 py-6 mb-6 touch-manipulation"
                 >
                   Get Your Snack Box Now
                   <ShoppingCart className="ml-3 h-6 w-6" />
@@ -636,9 +696,18 @@ export default function Index() {
         </motion.section>
 
         {/* Simple Footer */}
-        <footer className="bg-slate-800 py-8">
+        <footer className="bg-slate-800 py-6 pb-20 sm:py-8 sm:pb-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center items-center gap-8">
+            {/* Admin Access */}
+            <div className="text-center mb-4">
+              <a
+                href="/admin"
+                className="text-xs text-gray-400 hover:text-white transition-colors"
+              >
+                Admin Dashboard
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
               {/* Facebook */}
               <a
                 href="https://facebook.com"
@@ -758,6 +827,8 @@ export default function Index() {
                         alt="Nutritious Snack Box - Gift A Snack"
                         className="w-full h-40 sm:h-64 object-contain"
                         loading="lazy"
+                        width={400}
+                        height={256}
                       />
                     </div>
 
@@ -802,11 +873,33 @@ export default function Index() {
                       size="lg"
                       className="mb-2"
                     />
-                    <div className="text-sm text-green-600 font-medium">
-                      ✓ Subscribe & Save available
+                    <div className="text-sm text-green-600 font-medium flex items-center gap-1">
+                      <svg
+                        className="w-3 h-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Fresh & high-quality snacks
                     </div>
-                    <div className="text-sm text-blue-600 font-medium">
-                      ✓ Walmart+ offer eligible
+                    <div className="text-sm text-blue-600 font-medium flex items-center gap-1">
+                      <svg
+                        className="w-3 h-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Walmart+ offer eligible
                     </div>
                   </div>
 
@@ -862,8 +955,10 @@ export default function Index() {
                         setIsModalOpen(false);
                         handleProceedToWalmart();
                       }}
+                      variant="primary"
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                      sparkPosition="left"
+                      className="w-full py-3 sm:py-4 rounded-xl touch-manipulation"
                     >
                       Buy Now on Walmart
                       <ShoppingCart className="ml-2 h-5 w-5" />
@@ -873,7 +968,7 @@ export default function Index() {
                       onClick={() => setIsModalOpen(false)}
                       variant="outline"
                       size="lg"
-                      className="w-full py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                      className="w-full py-2 sm:py-3 rounded-xl touch-manipulation border-2"
                     >
                       Continue Browsing
                     </Button>
